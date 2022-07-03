@@ -32,9 +32,9 @@ once everyhing is done please execute below command:
 ## 5. Test Program
 
 - from your browser or postman, please run below endpoint
-    - ```localhost:50050/v1/article/add`` to add article by input : title, author, body.
-
-      sample curl to add article
+    ```localhost:50050/v1/article/add``` 
+    to add article by input : title, author, body.
+    sample curl to add article :
 
       ```
         curl --location --request POST 'localhost:50050/v1/article/add' \
@@ -44,54 +44,44 @@ once everyhing is done please execute below command:
             "author" : "Rafa",
              "body" : "Daun yang jatuh tak pernah membenci angina, Dia membiarkan dirinya jatuh begitu saja, Tak Melawan. Mengikhlaskan Semuanya"
           }'
-
       ```
 
-    - ```localhost:50050/v1/article/list``` to display all articles
-
+    ```localhost:50050/v1/article/list``` to display all articles
       sample curl to display all articles
 
       ```
         curl --location --request GET 'localhost:50050/v1/article/list'
-
+      ```
     
 
-      ```localhost:50050/v1/article/list?author=Abdul``` to display article by paramater author
-    
+    ```localhost:50050/v1/article/list?author=Abdul``` to display article by paramater author
       sample curl to get article by input author parameter
 
       ```
         curl --location --request GET 'localhost:50050/v1/article/list?author=Abdul'
-
       ```
-
-
+      
     ```localhost:50050/v1/article/list?query=drama korea``` to display article by parameter query
-
       sample curl to get article by input query parameter
 
       ```
         curl --location --request GET 'localhost:50050/v1/article/list?query=drama korea'
-
       ```
 
     ```localhost:50050/v1/article/list?query=drama korea&author=Maria Ulfa``` to display article by both parameters (query and author)
-
       sample curl to get article by author and query
-
+      
         ```
           curl --location --request GET 'localhost:50050/v1/article/list?query=drama korea&author=Maria Ulfa'
-
         ```
-
-      sample response:
-
+     sample response:
+     
         ```
           {
-    "success": true,
-    "error": null,
-    "msg": "success",
-    "data": [
+         "success": true,
+         "error": null,
+          "msg": "success",
+         "data": [
         {
             "ID": 5,
             "Author": "Maria Ulfa",
@@ -112,9 +102,9 @@ once everyhing is done please execute below command:
             "Title": "botania garden",
             "Body": "nongsa garden adalah sebuah drama korea yang diperankan oleh aktor ternama, siapa lagi kalau bukan kim jong un",
             "Created": "2022-07-03T08:47:27.697622Z"
+           }
+         ]
         }
-    ]
-}
 
 
 
